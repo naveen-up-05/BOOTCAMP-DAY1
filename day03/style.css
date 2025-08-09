@@ -1,0 +1,43 @@
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.card{
+  
+  background-color: white;
+  width: 500px;
+  height: 500px;
+  color: black;
+  padding-left: 0px;
+  padding-top: 0px;
+  border: 3px solid black;
+  margin: 50px 50px 50px 50px;
+}
+h1{
+    text-align: center;
+    background-color: grey;
+
+    }
+    h1::after{
+        content: 'TOP';
+        background-color: red;
+        color: white;
+        position: absolute;
+        left: 65px;
+        top: 30px;
+        font-size: 25px;
+    }
+    h2{
+        text-align: center;
+        background-color: black;
+        color: white;   
+    }
+    h2:hover{
+        background-color: azure;
+        color: black;
+        cursor: pointer;
+    }
+
+   
