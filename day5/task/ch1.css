@@ -1,0 +1,30 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.card{
+   
+    width: 600px;
+    height: 500px;
+    background-color: white;
+    color: black;
+    padding: 0%;
+    border: 5px solid lightseagreen;;
+    margin: 300px 300px 300px 300px;
+
+}
+h1{
+    text-align: center;
+    background-color: gray;
+    color: black;
+}
+h2{
+    text-align: center;
+    background-color: black;
+    color:white;
+}
+h2:hover{
+    color:red;
+    cursor: pointer;
+}
