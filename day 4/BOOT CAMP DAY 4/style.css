@@ -1,21 +1,40 @@
-*/*{
+body{
+  
     margin: 0px;
     padding: 0px;
 }
-.card{
-    width: 500px;
-    height: 550px;
-    background-color: lightgray;
+header h1{
+  margin: 0px;
+}
+
+.card2{
+ 
+    width: 1000px;
+    height: auto;
+    background-color: white;
     color: black;
     padding: 25px;
     border: 5px solid lightseagreen;
     border-left: 0px;
     border-right: 0px;
-    margin: 200px 800px 300px 530px;
+    margin: 300px 300px 300px 300px;
 }
-h1{
-    text-align: center;    
+
+.card{
+    
+    width: 300px;
+    height: auto;
+    background-color: gray;
+    color: black;
+    padding: 0px;
+    border: 5px solid lightseagreen;
+    border-left: 0px;
+    border-right: 0px;
+    margin: 0px 0px 0px 0px;
 }
+
+  
+
 h3{
     display: inline;
     color: lightseagreen;
@@ -24,13 +43,9 @@ h3{
 h3:hover{
     color: black;
     cursor: pointer;
-}*/
-
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
 }
+
+
 body{
     
   background-color: #ecf0f1;
@@ -39,7 +54,18 @@ body{
 
 }
 h2 {
-  font-size: 50px;
+  font-size: 40px;
+  color: lightseagreen;
+}
+h2::after{
+    content: 'TOP';
+    background-color: yellow;
+    color: black;
+    position: absolute;
+    right: 100px;
+    top: 470px;
+    font-size: 25px;
+
 }
 
 .container {
@@ -55,4 +81,22 @@ h2 {
   font-weight: bold;
   background-color: #e74c3c;
   color: white;
+}
+article header h2{
+  color: lightseagreen;
+}
+header{
+  background-color: #e74c3c;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  color: lightseagreen;
+}
+nav a{
+  color: lightseagreen;
+  padding-right: 10px ;
+}
+ button{
+  top: 500px;
+  right: 100px;
 }
