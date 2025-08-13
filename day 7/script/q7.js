@@ -16,9 +16,15 @@
 	Encoded Word: vghsd
 	 */
 
-    
-    let word = "white";
-a
-    
-    
-    
+
+let word = "white";
+if (word.length !== 5) {
+    console.log("Please enter a five-letter word.");
+} else {
+    let encoded = "";
+    for (let i = 0; i < word.length; i++) {
+        encoded += String.fromCharCode(word.charCodeAt(i) - 1);
+    }
+    console.log("Encoded Word: " + encoded);
+}
+
