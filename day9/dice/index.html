@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🎲 Dice Game</title>
+    <link rel="stylesheet" href="dice.css">
+</head>
+<body>
+
+    <h1>🎲 Dice Game 🎲</h1>
+
+    <div class="dice-container">
+        <div>
+            <h3>You</h3>
+            <img id="playerDice" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Dice-1-b.svg" alt="Player Dice">
+        </div>
+        <div>
+            <h3>Computer</h3>
+            <img id="computerDice" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Dice-1-b.svg" alt="Computer Dice">
+        </div>
+    </div>
+
+    <button onclick="playGame()">Roll Dice</button>
+
+    <div class="result" id="result"></div>
+
+    <script>
+        function rollDice() {
+            return Math.floor(Math.random() * 6) + 1;
+        }
+
+        function playGame() {
+            let playerRoll = rollDice();
+            let computerRoll = rollDice();
+
+            // Change dice images
+            document.getElementById("playerDice").src = `https://upload.wikimedia.org/wikipedia/commons/${getDiceImage(playerRoll)}`;
+            document.getElementById("computerDice").src = `https://upload.wikimedia.org/wikipedia/commons/${getDiceImage(computerRoll)}`;
+
+            // Decide winner
+            let message = `You rolled: ${playerRoll} | Computer rolled: ${computerRoll} <br>`;
+            if (playerRoll > computerRoll) {
+                message += "🎉 You win!";
+            } else if (playerRoll < computerRoll) {
+                message += "💻 Computer wins!";
+            } else {
+                message += "😲 It's a tie!";
+            }
+            document.getElementById("result").innerHTML = message;
+        }
+
+        function getDiceImage(num) {
+            const diceImages = {
+                1: "1/1b/Dice-1-b.svg",
+                2: "5/5f/Dice-2-b.svg",
+                3: "b/b1/Dice-3-b.svg",
+                4: "f/fd/Dice-4-b.svg",
+                5: "0/08/Dice-5-b.svg",
+                6: "2/26/Dice-6-b.svg"
+            };
+            return diceImages[num];
+        }
+    </script>
+
+</body>
+</html>
+
